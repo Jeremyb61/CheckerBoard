@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table tr td {
+            height: 75px;
+            width: 75px;
+        }
+
+        .color1 {
+            background-color: blueviolet
+        }
+
+        .color2 {
+            background-color: beige
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        {% for i in range(x): %}
+        <tr>
+            {% for j in range(y): %}
+            <td class="color{{ (i+j)%2+1 }}"></td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+
+</html>
